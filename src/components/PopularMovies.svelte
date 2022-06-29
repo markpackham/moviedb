@@ -9,3 +9,15 @@
 		<MovieCard {movie} />
 	{/each}
 </div>
+
+<style>
+	h3 {
+		padding: 0 1rem;
+	}
+	.popular-movies {
+		display: grid;
+		grid-template-columns: repeat(autofix, minmax(250px, 1fr));
+		grid-column-gap: 1rem;
+		grid-row-gap: 2rem;
+	}
+</style>
