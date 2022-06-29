@@ -1,13 +1,19 @@
-<script>
-	let count = 0;
+<script context="module">
+	export async function load({ fetch }) {
+		const res = await fetch(
+			`https://api.themoviedb.org/3/movie/popular?api_key=d5c35e51c81488b19da7c1f572507a3d&language=en-US&page=1`
+		);
 
-	function incrementBtn() {
-		count++;
+		const data = await res.json();
+		if (res.ok) {
+			return {
+				props: { popular: data.results }
+			};
+		}
 	}
 </script>
 
-<h1>Number: {count}</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<a href="/about">Go to about</a>
-
-<button on:click={incrementBtn}>Increment</button>
+<script>
+	export let popular;
+	console.log(popular);
+</script>
