@@ -36,6 +36,17 @@
 		padding: 1rem;
 	}
 
+	label {
+		position: absolute;
+		font-size: 0.8rem;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		pointer-events: none;
+		color: white;
+		padding: 0rem 1rem;
+	}
+
 	.search {
 		position: relative;
 		width: 30%;
