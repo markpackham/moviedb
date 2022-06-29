@@ -14,6 +14,10 @@
 </script>
 
 <script>
+	import PopularMovies from '../components/PopularMovies.svelte';
 	export let popular;
-	console.log(popular);
 </script>
+
+<section>
+	<PopularMovies />
+</section>
