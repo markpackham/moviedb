@@ -19,5 +19,5 @@
 </script>
 
 <section>
-	<PopularMovies />
+	<PopularMovies {popular} />
 </section>
