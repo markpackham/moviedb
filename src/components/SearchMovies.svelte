@@ -1,6 +1,11 @@
+<script>
+	let inputValue = '';
+	let active = false;
+</script>
+
 <form class="search">
 	<label for="search_movie">Search Movie</label>
-	<input name="search_movie" type="text" />
+	<input on:focus={() => (active = true)} bind:value={inputValue} name="search_movie" type="text" />
 	<button type="submit">Search</button>
 </form>
 
