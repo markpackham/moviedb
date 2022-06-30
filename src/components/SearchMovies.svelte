@@ -3,11 +3,7 @@
 	let active = false;
 
 	function cancelInactive() {
-		if (inputValue) {
-			active = true;
-		} else {
-			active = false;
-		}
+		inputValue ? (active = true) : (active = false);
 	}
 </script>
 
@@ -21,6 +17,7 @@
 		bind:value={inputValue}
 		name="search_movie"
 		type="text"
+		class={active ? 'selected' : ''}
 	/>
 	{#if inputValue}
 		<button type="submit">Search</button>
@@ -74,5 +71,8 @@
 		position: relative;
 		width: 30%;
 		margin: 1rem;
+	}
+	input:selected {
+		background: rgb(50, 50, 50);
 	}
 </style>
