@@ -29,7 +29,9 @@
 		class={active ? 'selected' : ''}
 	/>
 	{#if inputValue}
-		<button type="submit">Search</button>
+		<button in:fly={{ x: 20, duration: 500 }} out:fly={{ x: 0, duration: 500 }} type="submit"
+			>Search</button
+		>
 	{/if}
 </form>
 
